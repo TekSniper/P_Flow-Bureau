@@ -44,5 +44,17 @@ namespace P_Flow_Bureau
             //    }
             //}
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel2.Width += 3;
+            if(panel2.Width >= panel1.Width) 
+            {
+                timer1.Stop();
+                Authentification authentification = new Authentification();
+                authentification.Show();
+                this.Hide();
+            }
+        }
     }
 }
